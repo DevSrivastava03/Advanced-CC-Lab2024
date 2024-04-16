@@ -1,0 +1,343 @@
+body {
+    background-color: black;
+    color: white;
+    text-align: center;
+    position: relative; 
+}
+area:hover {
+    cursor: url('pics/cursor.png'), auto;
+    cursor: pointer;
+    /* outline: 1px solid red;  */
+}
+
+h2{
+    font-family: "StretchPro";
+    margin: auto;
+    transform: translateX(0%);
+}
+  
+h1#camera-text {
+    color: white;
+    font-family: 'PixelifySans', sans-serif; 
+    transform: translate(-10px,-10px);
+    position: relative;
+    z-index: 1; 
+}
+.camera-image {
+    width: 500px; 
+    height: auto;
+    transform: translate(-10px, -180px);
+    position: relative;
+   
+}
+
+
+.a{
+    text-decoration: none;
+    
+}
+
+h1{
+    color: white;
+    text-decoration: none;
+    font-family: 'PixelifySans',sans-serif;
+}
+h1:hover {
+    color: green;
+}
+
+@font-face {
+    font-family: 'PixelifySans';
+    src: url('font/PixelifySans-VariableFont_wght.ttf') format('truetype');
+}
+
+.info-title {
+    position: absolute;
+    top: 580px; 
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2; 
+    font-family: 'StretchPro', sans-serif;
+    font-size: 12px;
+}
+
+@font-face {
+    font-family: 'StretchPro';
+    src: url(font/StretchPro.otf);
+}
+.boat-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px; 
+}
+
+
+.boat {
+    width: 500px;
+}
+
+.boat__content {
+    text-align: center;
+    position: relative;
+    padding: 15em 5em;
+    transition: transform 3s;
+    transform-style: preserve-3d;
+}
+
+.boat:hover .boat__content {
+    transform: rotateY(180deg);
+}
+
+.boat__front,
+.boat__back {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 5em 3em;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    display: grid;
+    align-content: center;
+    background-size: cover;
+    background-blend-mode: overlay;
+    font-family: 'Billie Eilish', serif;
+}
+
+
+
+.boat__title {
+    font-size: 3.5rem;
+    transform: var(--level-three);
+    order: 2;
+    text-transform: uppercase;
+}
+
+
+
+.boat__body {
+    transform: var(--level-two);
+    font-weight: var(fw-normal);
+    font-size: 1.5rem;
+    line-height: 1.6;
+}
+
+.boat__back {
+    transform: rotateY(.5turn);
+    color: var(--clr);
+    background: #333;
+}
+
+
+.chair-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px; 
+}
+
+
+.chair {
+    width: 500px;
+}
+
+.chair__content {
+    text-align: center;
+    position: relative;
+    padding: 15em 5em;
+    transition: transform 3s;
+    transform-style: preserve-3d;
+}
+
+.chair:hover .chair__content {
+    transform: rotateY(180deg);
+}
+
+.chair__front,
+.chair__back {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 5em 3em;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    display: grid;
+    align-content: center;
+    background-size: cover;
+    background-blend-mode: overlay;
+    font-family: 'Billie Eilish', serif;
+}
+
+@font-face {
+    font-family: 'Mogent';
+    src: url(font/Mogent.otf);
+}
+
+.chair__title {
+    font-size: 3.5rem;
+    transform: var(--level-three);
+    order: 2;
+    text-transform: uppercase;
+}
+
+.chair__body {
+    transform: var(--level-two);
+    font-weight: var(fw-normal);
+    font-size: 1.5rem;
+    line-height: 1.2;
+}
+
+.chair__back {
+    transform: rotateY(.5turn);
+    color: var(--clr);
+    background: #333;
+}
+.projector-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px; 
+}
+
+.projector {
+    width: 400px;
+}
+
+.projector__content {
+    text-align: center;
+    position: relative;
+    padding: 15em 5em;
+    transition: transform 3s;
+    transform-style: preserve-3d;
+}
+
+.projector:hover .projector__content {
+    transform: rotateY(180deg);
+}
+
+.projector__front,
+.projector__back {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 5em 3em;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    display: grid;
+    align-content: center;
+    background-size: cover;
+    background-blend-mode: overlay;
+    font-family: 'Billie Eilish', serif; 
+}
+
+@font-face {
+    font-family: 'billie eilish';
+    src: url(font/billieeilish.ttf);
+}
+
+.projector__title {
+    font-size: 3.5rem;
+    transform: var(--level-three);
+    order: 2;
+    text-transform: uppercase;
+}
+
+.projector__body {
+    transform: var(--level-two);
+    font-weight: var(fw-normal);
+    font-size: 1.5rem;
+    line-height: 0.9;
+}
+
+.projector__back {
+    transform: rotateY(.5turn);
+    color: var(--clr);
+    background: #333;
+}
+.container {
+    max-width: 1200px; /* Adjust max-width as needed */
+    margin: 0 auto; /* Center the container */
+}
+
+
+.image-grid {
+    --gap: 16px;
+    --num-cols: 4;
+    --row-height: 300px;
+
+    box-sizing: border-box;
+    padding: var(--gap);
+
+    display: grid;
+    grid-template-columns: repeat(var(--num-cols), 1fr);
+    grid-auto-rows: var(--row-height);
+    gap: var(--gap);
+}
+
+.image-grid img {
+    max-width: 100%; 
+    max-height: 100%; 
+    object-fit: cover; /* Maintain aspect ratio and cover container */
+}
+
+.image-grid-col-2 {
+    grid-column: span 2;
+}
+
+.image-grid-row-2 {
+    grid-row: span 2;
+}
+
+.arrow-link {
+    position: absolute;
+    top: 50%;
+    right: 90px; /* Adjust the distance from the right edge */
+    transform: translate(120%,60%);
+    font-size: 50px; /* Adjust the font size as needed */
+    color: red;
+    text-decoration: none;
+    z-index: 9; 
+}
+.arrow1-link{
+    position: absolute;
+    top: 50%;
+    right: 90px; /* Adjust the distance from the right edge */
+    transform: translate(120%,30%);
+    font-size: 50px; /* Adjust the font size as needed */
+    color: red;
+    text-decoration: none;
+    z-index: 9; 
+} 
+.arrow2-link{
+    position: absolute;
+    top: 50%;
+    right: 90px; /* Adjust the distance from the right edge */
+    transform: translate(-2540%,30%);
+    font-size: 50px; /* Adjust the font size as needed */
+    color: red;
+    text-decoration: none;
+    z-index: 9; 
+}
+
+video {
+    width: 50%; 
+    height: auto; 
+    display: block; 
+    margin: 0 auto; 
+}
+
+.videop{
+    font-family: "Billie Eilish";
+}
+.street{
+    font-family:"StretchPro",sans-serif ;
+    font-size: 20px;
+}
+
+@font-face {
+    font-family: "StretchPro", format("truetype");
+    src: url(font/StretchPro.otf);
+}

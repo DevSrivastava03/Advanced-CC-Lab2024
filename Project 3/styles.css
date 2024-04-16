@@ -1,0 +1,38 @@
+body {
+  background-color: black;
+  color: white; 
+  font-family: Arial, sans-serif; 
+  display: flex; /* Make body a flex container */
+  justify-content: center; /* Center aligns its children horizontally */
+  align-items: center; /* Center aligns its children vertically */
+  height: 100vh; /* Set the height to viewport height for centering vertically */
+}
+
+.container {
+  max-width: 800px; 
+  padding: 20px;
+  text-align: center; /* Center aligns its children */
+}
+
+h1, h2, p {
+  text-align: center;
+  margin-top: auto; /* Aligns h1, h2, and p elements */
+}
+
+.btn {
+  display: block; /* Change display property to block */
+  margin: 0 auto; /* Center horizontally */
+  width: 200px;
+  padding: 10px 20px;
+  background-color: rgb(3, 29, 57);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background-color: #0056b3; 
+}

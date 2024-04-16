@@ -1,0 +1,55 @@
+@font-face {
+    font-family: 'RubikScribble-Regular';
+    src: url('font/RubikScribble-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'CustomFont';
+    src: url('font/BADABB__.TTF');
+}
+
+body {
+    background-color: black;
+}
+
+.quote {
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-size: 55px;
+    justify-content: center;
+    margin: 50px;
+    font-family: 'CustomFont', sans-serif; /* Changed to CustomFont */
+}
+
+h1 {
+    font-family: 'RubikScribble-Regular', sans-serif; 
+    font-size: 60px;
+    font-style: italic;
+    text-align: center;
+}
+
+
+#mcqContainer ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+#mcqContainer ul li {
+    display: inline-block;
+    margin-right: 10px; 
+}
+
+#mcqContainer ul li label {
+    display: inline-block;
+    cursor: pointer;
+}
+#mcqContainer form {
+    text-align: center; 
+}
+
+#mcqContainer input[type="submit"] {
+    margin-top: 20px; 
+}
+
+
