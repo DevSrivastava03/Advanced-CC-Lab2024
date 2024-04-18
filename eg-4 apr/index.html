@@ -3,20 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kanye Data</title>
+    <title>Kanye vs Advice</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Why did Kanye say this?</h1>
-    <div id="newsList"></div>
+    <div id="headingContainer">
+        <h1>Who Said It?</h1>
+    </div>
+    <div id="feedback">
+        <div id="correctFeedback"></div>
+        <div id="incorrectFeedback"></div>
+    </div>
+    <div id="quoteContainer"></div>
     <div id="mcqContainer">
         <form id="mcqForm">
-            <label for="question1"></label><br>
-            <ul id="question1">
-                <li><input type="radio" id="medicine" name="question1" value="medicine"><label for="medicine">Are the medicines over?</label></li>
-                <li><input type="radio" id="jonah_hill" name="question1" value="jonah hill"><label for="jonah_hill">Was the Jonah Hill move too good?</label></li>
-                <li><input type="radio" id="drake_video" name="question1" value="drake video"><label for="drake_video">Did he see the drake video?</label></li>
-                <li><input type="radio" id="clothes" name="question1" value="clothes"><label for="clothes">He's not selling clothes?</label></li>
+            <ul>
+                <li>
+                    <input type="radio" id="kanye1" name="answer" value="kanye">
+                    <label for="kanye1">Kanye West</label>
+                </li>
+                <li>
+                    <input type="radio" id="advice1" name="answer" value="advice">
+                    <label for="advice1">Actual Advice</label>
+                </li>
             </ul>
             <input type="submit" value="Submit">
         </form>

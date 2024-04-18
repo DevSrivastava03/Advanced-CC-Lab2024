@@ -2,54 +2,113 @@
     font-family: 'RubikScribble-Regular';
     src: url('font/RubikScribble-Regular.ttf');
 }
-
 @font-face {
-    font-family: 'CustomFont';
-    src: url('font/BADABB__.TTF');
+    font-family: 'Sedan Regular';
+    src: url('font/Sedan-Regular.ttf') format('truetype'); /* Adjust the path as per your project structure */
 }
-
 body {
-    background-color: black;
+    background-color: #1a1a1a; 
+    font-family: 'Sedan Regular', Arial, sans-serif;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center;
+    height: 100vh; 
+    color: #ffffff; 
+    margin: 0; 
+    padding: 0; 
+    font-size: 25px;
 }
-
-.quote {
-    color: rgb(0, 0, 0);
+#headingContainer {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #1a1a1a;
     text-align: center;
-    font-size: 55px;
-    justify-content: center;
-    margin: 50px;
-    font-family: 'CustomFont', sans-serif; /* Changed to CustomFont */
+    z-index: 999; /* Ensure it's above other content */
 }
 
 h1 {
-    font-family: 'RubikScribble-Regular', sans-serif; 
-    font-size: 60px;
-    font-style: italic;
-    text-align: center;
+    margin-top: 20px; /* Adjusted margin for spacing */
+    margin-bottom: 0; /* Removed margin from the bottom */
+    font-family: 'RubikScribble-Regular', sans-serif;
+    font-size: 60px; /* Reduced font size for better readability */
+    color: #4CAF50;
 }
 
 
-#mcqContainer ul {
-    list-style-type: none;
-    padding: 0;
-    text-align: center;
+#quoteContainer {
+    text-align: center; 
+    margin-bottom: 80px; 
 }
 
-#mcqContainer ul li {
-    display: inline-block;
-    margin-right: 10px; 
-}
-
-#mcqContainer ul li label {
-    display: inline-block;
-    cursor: pointer;
-}
-#mcqContainer form {
+#mcqContainer {
+    display: flex; 
+    flex-direction: row; 
+    justify-content: center; 
+    align-items: center; 
     text-align: center; 
 }
 
-#mcqContainer input[type="submit"] {
-    margin-top: 20px; 
+#mcqForm {
+    margin-left: 10px;
+    margin-right: 20px;
+    margin-bottom: 90px;
+    color: #ffffff; 
 }
 
+#mcqForm ul {
+    list-style-type: none; 
+    padding: 0;
+    margin: 0; 
+    display: flex; 
+}
 
+#mcqForm li {
+    margin-right: 50px; 
+    margin-left: 50px; 
+}
+
+#mcqForm input[type="radio"] {
+    margin-right: 5px; 
+}
+
+#mcqForm input[type="submit"] {
+    margin-top: 20px; 
+    background-color: #4CAF50; 
+    color: #ffffff; 
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s; 
+}
+
+#mcqForm input[type="submit"]:hover {
+    background-color: #45a049; 
+}
+
+#feedback {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    text-align: center;
+}
+
+#correctFeedback, #incorrectFeedback {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 4px;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+#correctFeedback {
+    background-color: #45a049; 
+}
+
+#incorrectFeedback {
+    background-color: #f44336; 
+}

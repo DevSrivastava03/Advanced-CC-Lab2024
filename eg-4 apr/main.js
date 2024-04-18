@@ -1,4 +1,43 @@
-document.addEventListener('DOMContentLoaded', fetchKanyeData);
+document.addEventListener('DOMContentLoaded', fetchRandomQuote);
+
+const correctFeedbackDiv = document.getElementById('correctFeedback');
+const incorrectFeedbackDiv = document.getElementById('incorrectFeedback');
+const mcqForm = document.getElementById('mcqForm');
+
+mcqForm.addEventListener('submit', async function(event) {
+    event.preventDefault();
+    const formData = new FormData(mcqForm);
+    const userAnswer = formData.get('answer');
+    const correctAnswer = determineCorrectAnswer();
+
+    // Provide feedback
+    if (userAnswer === correctAnswer) {
+        correctFeedbackDiv.textContent = 'Correct!';
+        incorrectFeedbackDiv.textContent = ''; 
+    } else {
+        incorrectFeedbackDiv.textContent = 'Incorrect!';
+        correctFeedbackDiv.textContent = ''; 
+    }
+    await fetchRandomQuote();
+});
+
+async function fetchRandomQuote() {
+    const quoteContainer = document.getElementById('quoteContainer');
+    try {
+        const randomAPI = Math.random() < 0.5 ? 'kanye' : 'advice'; 
+        let quote;
+        if (randomAPI === 'kanye') {
+            const kanyeData = await fetchData('https://api.kanye.rest');
+            quote = kanyeData.quote;
+        } else {
+            const adviceData = await fetchData('https://api.adviceslip.com/advice');
+            quote = adviceData.slip.advice;
+        }
+        quoteContainer.textContent = quote;
+    } catch (error) {
+        console.error('Error fetching quote:', error);
+    }
+}
 
 async function fetchData(url) {
     try {
@@ -12,47 +51,7 @@ async function fetchData(url) {
     }
 }
 
-async function fetchKanyeData() {
-    try {
-        const response = await fetch('https://api.kanye.rest');
-        if (!response.ok) {
-            throw new Error('Network response was not ok');
-        }
-        const data = await response.json();
-        displayKanyeData(data);
-    } catch (error) {
-        console.error('Fetch error:', error);
-    }
+function determineCorrectAnswer() {
+    const randomAPI = Math.random() < 0.5 ? 'kanye' : 'advice';
+    return randomAPI;
 }
-
-function displayKanyeData(data) {
-    const kanyeQuote = document.createElement('div');
-    const randomColor = generateRandomColor();
-    kanyeQuote.innerHTML = `
-        <p class="quote">${data.quote}</p>
-    `;
-    document.body.style.backgroundColor = randomColor; // Set background color
-    document.body.appendChild(kanyeQuote);
-}
-
-function generateRandomColor() {
-    const letters = '0123456789ABCDEF';
-    let color = '#';
-    for (let i = 0; i < 6; i++) {
-        color += letters[Math.floor(Math.random() * 16)];
-    }
-    return color;
-}
-
-const mcqForm = document.getElementById('mcqForm');
-mcqForm.addEventListener('submit', function(event) {
-    event.preventDefault();
-    const formData = new FormData(mcqForm);
-    let score = 0;
-    formData.forEach((value) => {
-        if (value === 'medicine' || value === 'jonah hill' || value === 'drake video' || value === 'clothes') {
-            score++;
-        }
-    });
-    window.location.reload();
-});
