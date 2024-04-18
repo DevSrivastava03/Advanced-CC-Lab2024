@@ -4,7 +4,7 @@
 }
 @font-face {
     font-family: 'Sedan Regular';
-    src: url('font/Sedan-Regular.ttf') format('truetype'); /* Adjust the path as per your project structure */
+    src: url('font/Sedan-Regular.ttf') format('truetype'); 
 }
 body {
     background-color: #1a1a1a; 
@@ -25,14 +25,14 @@ body {
     width: 100%;
     background-color: #1a1a1a;
     text-align: center;
-    z-index: 999; /* Ensure it's above other content */
+    z-index: 999; 
 }
 
 h1 {
-    margin-top: 20px; /* Adjusted margin for spacing */
-    margin-bottom: 0; /* Removed margin from the bottom */
+    margin-top: 20px; 
+    margin-bottom: 0; 
     font-family: 'RubikScribble-Regular', sans-serif;
-    font-size: 60px; /* Reduced font size for better readability */
+    font-size: 60px; 
     color: #4CAF50;
 }
 
