@@ -19,6 +19,14 @@ body {
     padding: 0; 
     font-size: 25px;
 }
+.container {
+    text-align: center;
+    margin-top: 50px; /* Adjust as needed */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh; /* Ensures the container takes up the full height of the viewport */
+}
 #headingContainer {
     position: fixed;
     top: 0;
@@ -111,4 +119,13 @@ h1 {
 
 #incorrectFeedback {
     background-color: #f44336; 
+}
+
+a {
+    color: #ffffff; /* Set link color to standard blue */
+    text-decoration: none; /* Remove underline */
+}
+
+a:hover {
+    color: #00EE00; /* Set link color to green on hover */
 }
