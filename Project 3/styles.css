@@ -1,41 +1,78 @@
 body {
   background-color: black;
-  color: white; 
-  font-family: Arial, sans-serif; 
-  display: flex; /* Make body a flex container */
-  justify-content: center; /* Center aligns its children horizontally */
-  align-items: center; /* Center aligns its children vertically */
-  height: 100vh; /* Set the height to viewport height for centering vertically */
+  color: #fff; 
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  height: 100vh; 
+  margin: 0;
 }
 
 .container {
   max-width: 800px; 
   padding: 20px;
-  text-align: center; /* Center aligns its children */
+  text-align: center; 
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
 h1, h2, p {
-  text-align: center;
-  margin-top: auto; /* Aligns h1, h2, and p elements */
+  margin-top: auto; 
 }
 
 .btn {
-  display: block; /* Change display property to block */
-  margin: 0 auto; /* Center horizontally */
-  width: 200px;
-  padding: 10px 20px;
-  background-color: rgb(3, 29, 57);
-  color: white;
+  display: inline-block; 
+  margin: 10px;
+  padding: 12px 24px;
+  background-color: #007bff;
+  color: #fff;
   border: none;
-  border-radius: 5px;
+  border-radius: 25px;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 18px;
   text-decoration: none;
+  transition: background-color 0.3s ease;
 }
 
 .btn:hover {
   background-color: #0056b3; 
 }
-.chart-container {
-  display: none;
+
+.error {
+  color: red;
+}
+
+.question {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.choices button {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 12px 24px;
+  background-color: #333;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.choices button:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+@font-face {
+  font-family: 'LEMONMILK';
+  src: url('font/LEMONMILK-Regular.otf') format('opentype');
+}
+
+.question {
+  font-family: 'LEMONMILK', Arial, sans-serif;
+  font-size: 24px;
+  margin-bottom: 20px;
 }
